@@ -1,29 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Site Layout</title>
+<title>Site Layout</title>
+<style>
+  body {
+         margin: 0;
+         font-family: Arial, sans-serif;
+         display: flex;
+         flex-direction: column;
+         height: 100vh;
+        }
+
+   .row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+.column {
+            display: flex;
+            flex-direction: column;
+        }
+
+  .header {
+            height: 10%;
+            display: flex;
+        }
+
+   .logo {
+            width: 5%;
+            background: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    .header-content {
+            flex-grow: 1;
+            background: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    .navigation {
+            height: 10%;
+            display: flex;
+        }
+
+    .nav-item {
+            flex: 1;
+            text-align: center;
+            background: #ccc;
+            border-right: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    .nav-item:last-child {
+            border-right: none;
+        }
+
+     .nav-item a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+       .content {
+            flex-grow: 1;
+            display: flex;
+        }
+
+      .sidebar {
+            width: 30%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+      .main-content {
+            flex-grow: 1;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+</style>
 </head>
-<frameset rows="10%,10%,*">
-    
-    <frameset cols="5%,*">
-        <frame name="logo" src="logo4.html" />
-        <frame name="header" src="header4.html" />
-    </frameset>
 
-    
-    <frameset cols="20%,20%,20%,20%,20%">
-        <frame src="home4.html" name="homeframe" />
-        <frame src="login4.html" name="loginframe" />
-        <frame src="registration4.html" name="registrationframe" />
-        <frame src="catalogue4.html" name="catalogueframe" />
-        <frame src="contactus4.html" name="contactframe" />
-    </frameset>
-
-    
-    <frameset cols="30%,70%">
-        <frame src="services.html" name="servicesframe" />
-        <frame src="description.html" name="descriptionframe" />
-    </frameset>
-</frameset>
-
+<body>
+  <div class="row header">
+        <div class="logo">
+            Logo Content
+        </div>
+        <div class="header-content">
+            Header Content
+        </div>
+  </div>
+   <div class="row navigation">
+        <div class="nav-item"><a href="home4.html">Home</a> </div>
+        <div class="nav-item"><a href="login4.html">Login</a> </div>
+        <div class="nav-item"><a href="registration4.html">Registration</a> </div>
+        <div class="nav-item"><a href="catalogue4.html">Catalogue</a> </div>
+        <div class="nav-item"><a href="contactus4.html">Contact Us</a> </div>
+    </div>
+   <div class="row content">
+        <div class="sidebar">
+            <a href="services.html">Services</a>
+        </div>
+        <div class="main-content">
+            <a href="description.html">Description</a>
+        </div>
+    </div>
+</body>
 </html>
